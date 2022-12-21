@@ -1,0 +1,21 @@
+.hero {
+  background-color: #131111;
+  background-image: url("../img/svg/hero-bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 0 130px;
+}
+
+.hero__bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.hero__bg svg {
+
+  width: 89.9%;
+  height: auto;
+}

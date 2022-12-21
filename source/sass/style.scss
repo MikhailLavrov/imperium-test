@@ -1,7 +1,8 @@
 // Vendor
 @import "vendor/normalize";
-// Swiper 7.4.1
-// @import "vendor/swiper";
+// import Swiper and modules styles
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
 
 // Global
 @import "variables";
@@ -12,3 +13,11 @@
 @import "global/container";
 
 // Blocks
+@import "blocks/header";
+@import "blocks/site-nav";
+@import "blocks/user-nav";
+@import "blocks/hero";
+@import "blocks/hero-card";
+@import "blocks/swiper";
+@import "blocks/footer";
+@import "blocks/button";

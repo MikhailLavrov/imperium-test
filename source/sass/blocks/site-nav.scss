@@ -1,0 +1,28 @@
+.site-nav__list {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  
+  list-style: none;
+}
+
+.site-nav__item a {
+  color: #7d7d7d;
+  transition: color 0.2s ease;
+}
+
+.site-nav__item {
+  &--current a {
+    color: #d8d8d8;
+    cursor: default;
+  }
+
+  @include hover-focus {
+    & a {
+      color: #d8d8d8;
+    }
+  }
+}

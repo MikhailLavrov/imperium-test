@@ -1,0 +1,30 @@
+.user-nav__list {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  list-style: none;
+}
+
+.user-nav__item a {
+  width: 26px;
+  height: 26px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    stroke: #bcbcbc;
+    transition: stroke 0.2s ease;
+  }
+
+  @include hover-focus {
+    & svg {
+      stroke: #d8d8d8;
+    }
+  }
+}

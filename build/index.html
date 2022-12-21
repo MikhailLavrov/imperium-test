@@ -10,20 +10,303 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container">
-          
+      <header class="header">
+        <div class="header__container container">
+          <a class="header__logo">
+            <span class="visually-hidden">Логотип компании.</span>
+            <img src="./img/svg/logo-short.svg" alt="Логотип компании Заряд.">
+          </a>
+          <div class="header__translate">
+            <button class="header__translate-button header__translate-button--current" type="button">Ru</button>
+            /
+            <button class="header__translate-button" type="button">En</button>
+          </div>
+          <nav class="header__site-nav site-nav">
+            <ul class="site-nav__list">
+              <li class="site-nav__item site-nav__item--current">
+                <a href="#">Клюшки</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#">Одежда</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#">Аксессуары</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#">Кастомизация</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#">Отследить заказ</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__user-nav user-nav">
+            <ul class="user-nav__list">
+              <li class="user-nav__item">
+                <a href="#">
+                  <span class="visually-hidden">Поиск по сайту.</span>
+                  <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка поиск.">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="user-nav__item">
+                <a href="#">
+                  <span class="visually-hidden">Связаться по телефону.</span>
+                  <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка телефон.">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="user-nav__item">
+                <a href="#">
+                  <span class="visually-hidden">Цены.</span>
+                  <svg width="18" height="17" role="img" aria-hidden="true" focusable="false" aria-label="Иконка цены.">
+                    <use xlink:href="img/sprite.svg#level"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="user-nav__item">
+                <a href="#">
+                  <span class="visually-hidden">Личный профиль.</span>
+                  <svg width="18" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка профиль.">
+                    <use xlink:href="img/sprite.svg#person"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a class="header__shopping-cart" href="#">
+            <span class="visually-hidden">Корзина.</span>
+            <svg width="50" height="50" role="img" aria-hidden="true" focusable="false" aria-label="Иконка корзина.">
+              <use xlink:href="img/sprite.svg#shopping-cart"></use>
+            </svg>
+          </a>
         </div>
       </header>
       <main>
-        <section class="intro">
+        <section class="hero">
+          <h1 class="visually-hidden">Завод хоккейного оборудования Заряд.</h1>
           <div class="container">
+            <div class="hero__bg">
+              <svg width="1096" height="117" role="img" aria-hidden="true" focusable="false" aria-label="Декоративный элемент.">
+                <use xlink:href="img/sprite.svg#hero-title-bg"></use>
+              </svg>
+            </div>
+
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="hero-card">
+                    <div class="hero-card__image">
+                      <picture>
+                        <source type="image/webp" srcset="./img/hero-slide-1.webp 1x, ./img/hero-slide-1@2x.webp 2x">
+                        <img width="992" height="600" src="./img/hero-slide-1.png" alt="Спортсмен 1." srcset="./img/hero-slide-1@2x.png 2x">
+                      </picture>
+                    </div>
+                    <div class="hero-card__content">
+                      <h2>Константин <br>Константинович</h2>
+                      <p>Крутой хоккеист <br>такой-то команды</p>
+                      <button class="hero-card__button" type="button">
+                        <svg width="125" height="125" viewBox="22 -15 56 130">
+                          <g>
+                            <path id="circlePath" d="m50 50m-50 0a50 50 0 01100 0 50 50 0 01-100 0" fill="none"/>
+                            <text x="6" fill="#F5F5F5">
+                              <textPath xlink:href="#circlePath">Смотреть отзыв Константина Константин смотреть</textPath>
+                            </text>
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                    <a class="button" href="#">В каталог</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero-card">
+                    <div class="hero-card__image">
+                      <picture>
+                        <source type="image/webp" srcset="./img/hero-slide-2.webp 1x, ./img/hero-slide-2@2x.webp 2x">
+                        <img width="992" height="600" src="./img/hero-slide-2.png" alt="Спортсмен 2." srcset="./img/hero-slide-2@2x.png 2x">
+                      </picture>
+                    </div>
+                    <div class="hero-card__content">
+                      <h2>Константин <br>Константинович</h2>
+                      <p>Крутой хоккеист <br>такой-то команды</p>
+                      <button class="hero-card__button" type="button">
+                        <svg width="125" height="125" viewBox="22 -15 56 130">
+                          <g>
+                            <path id="circlePath" d="m50 50m-50 0a50 50 0 01100 0 50 50 0 01-100 0" fill="none"/>
+                            <text x="6" fill="#F5F5F5">
+                              <textPath xlink:href="#circlePath">Смотреть отзыв Константина Константин смотреть</textPath>
+                            </text>
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                    <a class="button" href="#">В каталог</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero-card">
+                    <div class="hero-card__image">
+                      <picture>
+                        <source type="image/webp" srcset="./img/hero-slide-3.webp 1x, ./img/hero-slide-3@2x.webp 2x">
+                        <img width="992" height="600" src="./img/hero-slide-3.png" alt="Спортсмен 3." srcset="./img/hero-slide-3@2x.png 2x">
+                      </picture>
+                    </div>
+                    <div class="hero-card__content">
+                      <h2>Константин <br>Константинович</h2>
+                      <p>Крутой хоккеист <br>такой-то команды</p>
+                      <button class="hero-card__button" type="button">
+                        <svg width="125" height="125" viewBox="22 -15 56 130">
+                          <g>
+                            <path id="circlePath" d="m50 50m-50 0a50 50 0 01100 0 50 50 0 01-100 0" fill="none"/>
+                            <text x="6" fill="#F5F5F5">
+                              <textPath xlink:href="#circlePath">Смотреть отзыв Константина Константин смотреть</textPath>
+                            </text>
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                    <a class="button" href="#">В каталог</a>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
 
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container">
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__user-nav">
+            <a class="footer__logo">
+              <span class="visually-hidden">Логотип компании.</span>
+              <img src="./img/svg/logo-full.svg" alt="Логотип компании Заряд.">
+            </a>
+            <ul class="footer__sicials-list">
+              <li class="footer__socials-item">
+                <a href="#">
+                  <span class="visually-hidden">Ссылка на нас в телеграме.</span>
+                  <svg width="40" height="40" role="img" aria-hidden="true" focusable="false" aria-label="Ссылка телеграм.">
+                    <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a href="#">
+                  <span class="visually-hidden">Ссылка на нас в ВК.</span>
+                  <svg width="40" height="40" role="img" aria-hidden="true" focusable="false" aria-label="Ссылка ВК.">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts">
+            <dl class="footer__contacts-list">
+              <div class="footer__contacts-item footer__contacts-item--name">
+                <dt>Наименование</dt>
+                <dd>ООО «ЗаряД»</dd>
+              </div>
+
+              <div class="footer__contacts-item footer__contacts-item--address">
+                <dt>Юридический адрес</dt>
+                <dd>Республика Татарстан, г. Набережные Челны, ул. Альметьевский тракт, д. 6а</dd>
+              </div>
+
+              <div class="footer__contacts-item footer__contacts-item--phone">
+                <dt>Телефон</dt>
+                <dd>+7 (800) 511-93-90</dd>
+              </div>
+
+              <div class="footer__contacts-item footer__contacts-item--email">
+                <dt>Email</dt>
+                <dd>info@zaryad-hockey.ru</dd>
+              </div>
+
+              <div class="footer__contacts-item footer__contacts-item--inn">
+                <dt>ИНН</dt>
+                <dd>1646040440</dd>
+              </div>
+
+              <div class="footer__contacts-item footer__contacts-item--ogrn">
+                <dt>ОГРН</dt>
+                <dd>1151674001632</dd>
+              </div>
+            </dl>
+          </div>
+          <nav class="footer__navigation">
+            <div>
+              <h3>О бренде</h3>
+              <ul>
+                <li>
+                  <a href="#">История бренда</a>
+                </li>
+                <li>
+                  <a href="#">Технологии производства</a>
+                </li>
+                <li>
+                  <a href="#">Производство</a>
+                </li>
+                <li>
+                  <a href="#">Контакты магазинов</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Партнерам</h3>
+              <ul>
+                <li>
+                  <a href="#">Как стать партнером</a>
+                </li>
+                <li>
+                  <a href="#">Как мы работаем</a>
+                </li>
+                <li>
+                  <a href="#">Информация о выборе контрагентов</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Покупателям</h3>
+              <ul>
+                <li>
+                  <a href="#">Доставка и оплата</a>
+                </li>
+                <li>
+                  <a href="#">Обмен и возврат</a>
+                </li>
+                <li>
+                  <a href="#">Гарантия</a>
+                </li>
+                <li>
+                  <a href="#">Бонусная программа</a>
+                </li>
+                <li>
+                  <a href="#">Таблица размеров</a>
+                </li>
+                <li>
+                  <a href="#">Подарочный сертификат</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="footer__confidence">
+            <p>© 2017-2022 Заряд</p>
+            <a href="#" target="_blank">Политика конфиденциальности</a>
+          </div>
+          <a class="footer__connection-link button" href="#">Связаться с нами</a>
+          <a class="footer__developer-link" href="#" target="_blank">
+            <span class="visually-hidden">Логотип разработчика.</span>
+            <img src="./img/svg/developer.svg" alt="Логотип компании-разработчика Imperium.">
+          </a>
 
         </div>
       </footer>
