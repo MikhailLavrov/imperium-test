@@ -960,7 +960,7 @@ button,
   margin-right: auto;
 }
 
-.header__translate-button {
+.header__translate-link {
   padding: 0;
   color: #7d7d7d;
   background-color: transparent;
@@ -971,12 +971,12 @@ button,
   transition: color 0.2s ease;
 }
 
-.header__translate-button--current {
+.header__translate-link--current {
   color: #d8d8d8;
   cursor: default;
 }
 
-.header__translate-button.focus-visible:focus {
+.header__translate-link.focus-visible:focus {
   color: #d8d8d8;
 }
 
@@ -1068,6 +1068,8 @@ button,
 
 .user-nav__item a.focus-visible:focus svg {
   stroke: #d8d8d8;
+  -webkit-filter: drop-shadow(0 0 10px #d8d8d8);
+  filter: drop-shadow(0 0 10px #d8d8d8);
 }
 
 .hero {
@@ -1099,6 +1101,12 @@ button,
 
 .hero-card {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 .hero-card__content {
@@ -1124,6 +1132,10 @@ button,
   font-size: 16px;
   line-height: 22px;
   color: #f5f5f5;
+}
+
+.hero-card img {
+  height: 100%;
 }
 
 .hero-card__button {
@@ -1152,8 +1164,9 @@ button,
 }
 
 .hero-card a {
-  background-color: #ffffff;
   color: #333333;
+  padding: 10px;
+  background-color: #ffffff;
   position: absolute;
   top: -75px;
   right: -75px;
@@ -1166,15 +1179,11 @@ button,
 }
 
 .hero-card a.focus-visible:focus {
-  background-color: #F64F00;
   color: #ffffff;
+  background-color: #F64F00;
 }
 
 .hero-card__button text {
-  font-family: "Inter", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 10.41px;
-  line-height: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1182,14 +1191,18 @@ button,
   -ms-flex-align: center;
   align-items: center;
   text-transform: uppercase;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 10.41px;
+  line-height: 12px;
 }
 
 .hero-card__button svg {
-  -webkit-animation: rotating 30s linear infinite;
-  animation: rotating 30s linear infinite;
+  -webkit-animation: rotation 30s linear infinite;
+  animation: rotation 30s linear infinite;
 }
 
-@-webkit-keyframes rotating {
+@-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -1201,7 +1214,7 @@ button,
   }
 }
 
-@keyframes rotating {
+@keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -1264,6 +1277,36 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.swiper-slide .swiper__catalog-link,
+.swiper-slide .hero-card__content {
+  display: none;
+}
+
+.swiper .swiper-slide {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.swiper .swiper-slide-active {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.swiper-slide-active .swiper__catalog-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper-slide-active .hero-card__content {
+  display: block;
 }
 
 .footer {
@@ -1335,7 +1378,9 @@ button,
 
 .footer__socials-item a.focus-visible:focus svg {
   fill: #7d7d7d;
-  stroke: #f5f5f5;
+  stroke: #ffffff;
+  -webkit-filter: drop-shadow(0 0 5px #000000);
+  filter: drop-shadow(0 0 5px #000000);
 }
 
 .footer__contacts {
@@ -1413,13 +1458,18 @@ button,
 }
 
 .footer__navigation a.focus-visible:focus {
-  text-shadow: 0 0 20px rgba(246, 79, 0, 0.5);
+  text-decoration: underline;
+  -webkit-text-decoration-color: #F64F00;
+  text-decoration-color: #F64F00;
+  text-underline-offset: 5px;
+  color: #000;
 }
 
 .footer__confidence {
   position: absolute;
   bottom: 0;
   left: 40px;
+  max-width: 354px;
 }
 
 .footer__confidence a,
@@ -1450,6 +1500,7 @@ button,
 
 .footer__connection-link {
   padding: 30px;
+  max-width: 150px;
   color: #F64F00;
   -webkit-box-shadow: 0 0 0 1px currentColor inset;
   box-shadow: 0 0 0 1px currentColor inset;
@@ -1473,8 +1524,8 @@ button,
 }
 
 .button {
-  width: 150px;
-  height: 150px;
+  min-width: 150px;
+  min-height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1494,10 +1545,11 @@ button,
   user-select: none;
   border: none;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 @media (hover: hover) {
-  .header__translate-button:hover:not(.focus-visible) {
+  .header__translate-link:hover:not(.focus-visible) {
     color: #d8d8d8;
   }
 
@@ -1512,6 +1564,8 @@ button,
 
   .user-nav__item a:hover:not(.focus-visible) svg {
     stroke: #d8d8d8;
+    -webkit-filter: drop-shadow(0 0 10px #d8d8d8);
+    filter: drop-shadow(0 0 10px #d8d8d8);
   }
 
   .hero-card__button:hover:not(.focus-visible) {
@@ -1522,8 +1576,8 @@ button,
   }
 
   .hero-card a:hover:not(.focus-visible) {
-    background-color: #F64F00;
     color: #ffffff;
+    background-color: #F64F00;
   }
 
   .swiper .swiper-button-prev:hover:not(.focus-visible),
@@ -1534,11 +1588,17 @@ button,
 
   .footer__socials-item a:hover:not(.focus-visible) svg {
     fill: #7d7d7d;
-    stroke: #f5f5f5;
+    stroke: #ffffff;
+    -webkit-filter: drop-shadow(0 0 5px #000000);
+    filter: drop-shadow(0 0 5px #000000);
   }
 
   .footer__navigation a:hover:not(.focus-visible) {
-    text-shadow: 0 0 20px rgba(246, 79, 0, 0.5);
+    text-decoration: underline;
+    -webkit-text-decoration-color: #F64F00;
+    text-decoration-color: #F64F00;
+    text-underline-offset: 5px;
+    color: #000;
   }
 
   .footer__confidence a:hover:not(.focus-visible) {

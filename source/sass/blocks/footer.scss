@@ -54,7 +54,8 @@
   @include hover-focus {
     & svg {
       fill: #7d7d7d;
-      stroke: #f5f5f5;
+      stroke: #ffffff;
+      filter: drop-shadow(0 0 5px #000000);
     }
   }
 
@@ -136,7 +137,10 @@
   transition: all 0.2s ease;
 
   @include hover-focus {
-    text-shadow: 0 0 20px rgba(#F64F00, 0.5);
+    text-decoration: underline;
+    text-decoration-color: #F64F00;
+    text-underline-offset: 5px;
+    color: #000;
   }
 }
 
@@ -144,6 +148,7 @@
   position: absolute;
   bottom: 0;
   left: $base-indent;
+  max-width: 354px;
 }
 
 .footer__confidence a,
@@ -172,6 +177,7 @@
 
 .footer__connection-link {
   padding: 30px;
+  max-width: 150px;
 
   color: #F64F00;
   box-shadow: 0 0 0 1px currentColor inset;

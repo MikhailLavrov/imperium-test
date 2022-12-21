@@ -1,5 +1,7 @@
 .hero-card {
   position: relative;
+  display: flex;
+  align-items: stretch;
 }
 
 .hero-card__content {
@@ -31,9 +33,13 @@
   color: #f5f5f5;
 }
 
+.hero-card img {
+  height: 100%;
+}
+
 .hero-card__button {
   padding: 0;
-  
+
   width: 125px;
   height: 125px;
 
@@ -55,8 +61,10 @@
 }
 
 .hero-card a {
-  background-color: #ffffff;
   color: #333333;
+  padding: 10px;
+
+  background-color: #ffffff;
   position: absolute;
   top: -75px;
   right: -75px;
@@ -64,27 +72,28 @@
   transition: all 0.2s ease;
 
   @include hover-focus {
-    background-color: #F64F00;
     color: #ffffff;
+
+    background-color: #F64F00;
   }
 }
 
 .hero-card__button text {
+  display: flex;
+  align-items: center;
+
+  text-transform: uppercase;
   font-family: $ff-inter;
   font-weight: 500;
   font-size: 10.41px;
   line-height: 12px;
-
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
 }
 
 .hero-card__button svg {
-  animation: rotating 30s linear infinite;
+  animation: rotation 30s linear infinite;
 }
 
-@keyframes rotating {
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }

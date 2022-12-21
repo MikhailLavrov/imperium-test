@@ -12,7 +12,7 @@
 .user-nav__item a {
   width: 26px;
   height: 26px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +25,7 @@
   @include hover-focus {
     & svg {
       stroke: #d8d8d8;
+      filter: drop-shadow(0 0 10px #d8d8d8);
     }
   }
 }

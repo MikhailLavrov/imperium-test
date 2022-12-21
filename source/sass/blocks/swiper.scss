@@ -43,3 +43,25 @@
   display: flex;
   justify-content: center;
 }
+
+.swiper-slide .swiper__catalog-link,
+.swiper-slide .hero-card__content {
+  display: none;
+}
+
+.swiper .swiper-slide {
+  transform: scale(0.8);
+  transition: all 0.7s ease;
+}
+
+.swiper .swiper-slide-active {
+  transform: scale(1);
+}
+
+.swiper-slide-active .swiper__catalog-link {
+  display: flex;
+}
+
+.swiper-slide-active .hero-card__content {
+  display: block;
+}
