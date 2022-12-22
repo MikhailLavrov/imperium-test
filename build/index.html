@@ -42,16 +42,20 @@
           </nav>
           <div class="header__user-nav user-nav">
             <ul class="user-nav__list">
-              <li class="user-nav__item">
-                <a href="#">
+              <li class="user-nav__item user-nav__item--search">
+                <a href="#" id="searchLink">
                   <span class="visually-hidden">Поиск по сайту.</span>
                   <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка поиск.">
                     <use xlink:href="img/sprite.svg#search"></use>
                   </svg>
+                  <form class="user-nav__search-form" id="searchForm" action="https://echo.htmlacademy.ru/" method="get">
+                    <label class="visually-hidden" for="search">Поиск по сайту.</label>
+                    <input type="text" id="search" placeholder="Найти">
+                  </form>
                 </a>
               </li>
               <li class="user-nav__item">
-                <a href="#">
+                <a href="tel:+78005119390">
                   <span class="visually-hidden">Связаться по телефону.</span>
                   <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка телефон.">
                     <use xlink:href="img/sprite.svg#phone"></use>

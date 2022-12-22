@@ -1075,6 +1075,33 @@ button,
   filter: drop-shadow(0 0 10px #d8d8d8);
 }
 
+.user-nav__item--search {
+  position: relative;
+}
+
+.user-nav__search-form {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.user-nav__search-form--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-nav__search-form input {
+  background-color: #f5f5f5;
+  border: none;
+  padding: 10px;
+}
+
+.user-nav svg {
+  pointer-events: none;
+}
+
 .hero {
   padding: 40px 0 130px;
   background-color: #131111;
