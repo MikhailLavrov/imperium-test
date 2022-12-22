@@ -940,7 +940,7 @@ button,
 }
 
 .header {
-  padding: 15px 0;
+  padding: 11px 0 15px;
   color: #7d7d7d;
   background-color: #131111;
 }
@@ -983,6 +983,7 @@ button,
 }
 
 .header__site-nav {
+  margin-left: 65px;
   max-width: 550px;
 }
 
@@ -1138,6 +1139,7 @@ button,
 
 .hero-card img {
   height: 100%;
+  max-height: 598px;
 }
 
 .hero-card__button {
@@ -1170,8 +1172,8 @@ button,
   color: #333333;
   background-color: #ffffff;
   position: absolute;
-  top: -75px;
-  right: -75px;
+  top: -77px;
+  right: -100px;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
@@ -1229,7 +1231,6 @@ button,
 }
 
 .swiper {
-  padding-top: 75px;
   width: 100%;
   height: auto;
   overflow: visible;
@@ -1307,7 +1308,7 @@ button,
 }
 
 .footer {
-  padding: 100px 0;
+  padding: 100px 0 87px;
   color: #333333;
   background-color: #f5f5f5;
 }
@@ -1418,12 +1419,13 @@ button,
   display: grid;
   -ms-grid-columns: (auto)[2];
   grid-template-columns: repeat(2, auto);
-  gap: 56px 80px;
+  gap: 50px 80px;
   justify-self: flex-end;
 }
 
 .footer__navigation div:last-child {
   grid-column: 1/-1;
+  max-width: 540px;
 }
 
 .footer__navigation div:last-child ul {
@@ -1465,7 +1467,7 @@ button,
 .footer__confidence {
   max-width: 354px;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 40px;
 }
 
@@ -1516,7 +1518,7 @@ button,
 
 .footer__developer-link {
   position: absolute;
-  bottom: 0;
+  bottom: 14px;
   right: 56px;
 }
 
@@ -1571,7 +1573,7 @@ button,
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 90px;
-  line-height: 104px;
+  line-height: 96px;
   color: transparent;
   -webkit-text-stroke: 1px #f5f5f5;
 }
@@ -1605,8 +1607,8 @@ button,
 }
 
 .subscription__decor-element--blue::after {
-  background: -o-radial-gradient(50% 50%, 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%);
-  background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%);
+  background: -o-radial-gradient(50% 50%, 50% 50%, #0178f3 0%, rgba(1, 120, 243, 0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #0178f3 0%, rgba(1, 120, 243, 0) 100%);
 }
 
 .subscription__decor-element--red {
@@ -1617,8 +1619,8 @@ button,
 }
 
 .subscription__decor-element--red::after {
-  background: -o-radial-gradient(50% 50%, 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%);
-  background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%);
+  background: -o-radial-gradient(50% 50%, 50% 50%, #f64f00 0%, rgba(246, 79, 0, 0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #f64f00 0%, rgba(246, 79, 0, 0) 100%);
 }
 
 .subscription__decor-element--red svg {

@@ -36,6 +36,7 @@
 
 .hero-card img {
   height: 100%;
+  max-height: 598px;
 }
 
 .hero-card__button {
@@ -68,8 +69,8 @@
 
   background-color: #ffffff;
   position: absolute;
-  top: -75px;
-  right: -75px;
+  top: -77px;
+  right: -100px;
   transform: rotate(15deg);
   transition: all 0.2s ease;
 

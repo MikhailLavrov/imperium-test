@@ -1,5 +1,5 @@
 .footer {
-  padding: 100px 0;
+  padding: 100px 0 87px;
 
   color: #333333;
 
@@ -100,13 +100,14 @@
 
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 56px 80px;
+  gap: 50px 80px;
   justify-self: flex-end;
 }
 
 .footer__navigation div {
   &:last-child {
     grid-column: 1/-1;
+    max-width: 540px;
 
     & ul {
       column-count: 2;
@@ -147,7 +148,7 @@
   max-width: 354px;
 
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: $base-indent;
 }
 
@@ -197,6 +198,6 @@
 
 .footer__developer-link {
   position: absolute;
-  bottom: 0;
+  bottom: 14px;
   right: calc($base-indent + 16px);
 }
