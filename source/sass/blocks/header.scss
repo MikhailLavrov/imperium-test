@@ -1,6 +1,8 @@
 .header {
   padding: 11px 0 15px;
 
+  position: relative;
+
   color: #7d7d7d;
 
   background-color: #131111;
@@ -13,10 +15,23 @@
 
 .header__logo {
   margin-right: 40px;
+
+  @media (max-width: 768px) {
+    width: 75%;
+
+    & img {
+      height: auto;
+      width: 250px;
+    }
+  }
 }
 
 .header__translate {
   margin-right: auto;
+
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
 }
 
 .header__translate-link {
@@ -61,6 +76,237 @@
     @include hover-focus {
       stroke: #000000;
       fill: #f5f5f5;
+    }
+  }
+}
+
+// Mobile menu
+.header__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.header__menu-button {
+  display: none;
+
+  @media (max-width: 767px) {
+    padding: 0;
+    margin-left: auto;
+
+    width: 40px;
+    height: 40px;
+
+    display: block;
+    position: relative;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+// Кнопка меню при ЗАКРЫТОМ меню (иконка бургер)
+.header--closed .header__menu-button {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 -12px 0 0 #ffffff, 0 12px 0 0 #ffffff;
+  }
+}
+
+// Кнопка меню при ОТКРЫТОМ меню (иконка крестик)
+.header--opened {
+  & .header__menu-button {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 3px;
+      top: 50%;
+      left: 2px;
+      background-color: #ffffff;
+      box-shadow: none;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  & .header__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $secondary-indent;
+
+    position: absolute;
+    width: 100%;
+    top: 66px;
+    left: 0;
+    border-top: 1px solid #7d7d7d;
+
+    z-index: 3;
+    background-color: #000000;
+  }
+
+  & .header__translate {
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  & .header__site-nav {
+    margin: 0;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  & .site-nav__list {
+    margin: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
+  & .site-nav__item {
+    display: flex;
+
+    border-bottom: 1px solid #7d7d7d;
+
+    &:first-child {
+      border-top: 1px solid #7d7d7d;
+    }
+  }
+
+  & .site-nav__item a {
+    padding: 15px;
+    width: 100%;
+  }
+
+  & .header__shopping-cart {
+    margin: 0;
+    padding: 10px;
+  }
+
+  & .header__user-nav {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  & .user-nav__list {
+    justify-content: center;
+  }
+}
+
+// Сценарий No JS
+.wrapper--nojs {
+  @media (max-width: 768px) {
+    & .header {
+      padding: 0;
+    }
+
+    & .header__menu-button {
+      display: none;
+    }
+
+    & .header__container {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .header__logo {
+      margin: 0;
+      padding: 20px;
+
+      & img {
+        margin: 0 auto;
+      }
+    }
+
+    & .header__content {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 $secondary-indent;
+
+      width: 100%;
+      border-top: 1px solid #7d7d7d;
+
+      z-index: 3;
+      background-color: #000000;
+    }
+
+    & .header__translate {
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+
+    & .header__site-nav {
+      margin: 0;
+      width: 100vw;
+      max-width: 100vw;
+    }
+
+    & .site-nav__list {
+      margin: 0;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 0;
+    }
+
+    & .site-nav__item {
+      display: flex;
+
+      border-bottom: 1px solid #7d7d7d;
+
+      &:first-child {
+        border-top: 1px solid #7d7d7d;
+      }
+    }
+
+    & .site-nav__item a {
+      padding: 15px;
+      width: 100%;
+    }
+
+    & .header__shopping-cart {
+      margin: 0;
+      padding: 10px;
+    }
+
+    & .header__user-nav {
+      margin: 0;
+      padding: 10px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    & .user-nav__list {
+      justify-content: center;
     }
   }
 }

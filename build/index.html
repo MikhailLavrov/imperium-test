@@ -9,83 +9,91 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
+    <div class="wrapper wrapper--nojs">
+      <header class="header header--closed">
         <div class="header__container container">
           <a class="header__logo">
             <span class="visually-hidden">Логотип компании.</span>
-            <img src="./img/svg/logo-short.svg" alt="Логотип компании Заряд.">
+            <picture>
+              <source media="(max-width: 768px)" type="image/svg+xml" srcset="./img/svg/logo-full-light.svg">
+              <img width="62" height="30" src="./img/svg/logo-short.svg" alt="Логотип компании Заряд.">
+            </picture>
           </a>
-          <div class="header__translate">
-            <a class="header__translate-link header__translate-link--current">Ru</a>
-            /
-            <a class="header__translate-link" type="button">En</a>
+          <button class="header__menu-button" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+          <div class="header__content">
+            <div class="header__translate">
+              <a class="header__translate-link header__translate-link--current">Ru</a>
+              /
+              <a class="header__translate-link" type="button">En</a>
+            </div>
+            <nav class="header__site-nav site-nav">
+              <ul class="site-nav__list">
+                <li class="site-nav__item site-nav__item--current">
+                  <a href="#">Клюшки</a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#">Одежда</a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#">Аксессуары</a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#">Кастомизация</a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="#">Отследить заказ</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__user-nav user-nav">
+              <ul class="user-nav__list">
+                <li class="user-nav__item user-nav__item--search">
+                  <a href="#" id="searchLink">
+                    <span class="visually-hidden">Поиск по сайту.</span>
+                    <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка поиск.">
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                    <form class="user-nav__search-form" id="searchForm" action="https://echo.htmlacademy.ru/" method="get">
+                      <label class="visually-hidden" for="search">Поиск по сайту.</label>
+                      <input type="text" id="search" placeholder="Найти">
+                    </form>
+                  </a>
+                </li>
+                <li class="user-nav__item">
+                  <a href="tel:+78005119390">
+                    <span class="visually-hidden">Связаться по телефону.</span>
+                    <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка телефон.">
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="user-nav__item">
+                  <a href="#">
+                    <span class="visually-hidden">Цены.</span>
+                    <svg width="18" height="17" role="img" aria-hidden="true" focusable="false" aria-label="Иконка цены.">
+                      <use xlink:href="img/sprite.svg#level"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="user-nav__item">
+                  <a href="#">
+                    <span class="visually-hidden">Личный профиль.</span>
+                    <svg width="18" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка профиль.">
+                      <use xlink:href="img/sprite.svg#person"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a class="header__shopping-cart" href="#">
+              <span class="visually-hidden">Корзина.</span>
+              <svg width="50" height="50" role="img" aria-hidden="true" focusable="false" aria-label="Иконка корзина.">
+                <use xlink:href="img/sprite.svg#shopping-cart"></use>
+              </svg>
+            </a>
           </div>
-          <nav class="header__site-nav site-nav">
-            <ul class="site-nav__list">
-              <li class="site-nav__item site-nav__item--current">
-                <a href="#">Клюшки</a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#">Одежда</a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#">Аксессуары</a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#">Кастомизация</a>
-              </li>
-              <li class="site-nav__item">
-                <a href="#">Отследить заказ</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__user-nav user-nav">
-            <ul class="user-nav__list">
-              <li class="user-nav__item user-nav__item--search">
-                <a href="#" id="searchLink">
-                  <span class="visually-hidden">Поиск по сайту.</span>
-                  <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка поиск.">
-                    <use xlink:href="img/sprite.svg#search"></use>
-                  </svg>
-                  <form class="user-nav__search-form" id="searchForm" action="https://echo.htmlacademy.ru/" method="get">
-                    <label class="visually-hidden" for="search">Поиск по сайту.</label>
-                    <input type="text" id="search" placeholder="Найти">
-                  </form>
-                </a>
-              </li>
-              <li class="user-nav__item">
-                <a href="tel:+78005119390">
-                  <span class="visually-hidden">Связаться по телефону.</span>
-                  <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка телефон.">
-                    <use xlink:href="img/sprite.svg#phone"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="user-nav__item">
-                <a href="#">
-                  <span class="visually-hidden">Цены.</span>
-                  <svg width="18" height="17" role="img" aria-hidden="true" focusable="false" aria-label="Иконка цены.">
-                    <use xlink:href="img/sprite.svg#level"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="user-nav__item">
-                <a href="#">
-                  <span class="visually-hidden">Личный профиль.</span>
-                  <svg width="18" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Иконка профиль.">
-                    <use xlink:href="img/sprite.svg#person"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <a class="header__shopping-cart" href="#">
-            <span class="visually-hidden">Корзина.</span>
-            <svg width="50" height="50" role="img" aria-hidden="true" focusable="false" aria-label="Иконка корзина.">
-              <use xlink:href="img/sprite.svg#shopping-cart"></use>
-            </svg>
-          </a>
         </div>
       </header>
       <main>

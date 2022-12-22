@@ -3,4 +3,8 @@
   max-width: calc(1219px + $base-indent * 2);
   margin: 0 auto;
   padding: 0 $base-indent;
+
+  @media (max-width: 767px) {
+    padding: 0 $secondary-indent;
+  }
 }
