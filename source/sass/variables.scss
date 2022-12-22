@@ -3,6 +3,10 @@ $color-default-black: #000000;
 $color-default-white: #ffffff;
 $color-transparent: rgba(255, 255, 255, 0);
 
+// Gradients
+$blue-radial-gradient: radial-gradient(50% 50% at 50% 50%, #0178f3 0%, rgba(1, 120, 243, 0) 100%);
+$red-radial-gradient: radial-gradient(50% 50% at 50% 50%, #f64f00 0%, rgba(246, 79, 0, 0) 100%);
+
 // Typography
 $fz-default: 16px;
 $ff-raleway: "Raleway", "Arial", sans-serif;
