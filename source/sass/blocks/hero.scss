@@ -6,6 +6,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 }
 
 .hero__bg {

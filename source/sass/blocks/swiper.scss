@@ -58,8 +58,58 @@
 
 .swiper-slide-active .swiper__catalog-link {
   display: flex;
+
+  position: absolute;
+  top: -77px;
+  right: -100px;
+  transform: rotate(15deg);
+
+  @media (max-width: 1250px) {
+    max-width: 100px;
+    max-height: 100px;
+
+    right: auto;
+    left: 10px;
+    top: 20px;
+
+    transform: rotate(-15deg);
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+
+    max-width: 100%;
+    width: 100%;
+
+    position: relative;
+    height: auto;
+    left: auto;
+    top: auto;
+
+    border-radius: 0%;
+    transform: none;
+  }
+}
+
+.swiper-slide-active .hero-card {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .swiper-slide-active .hero-card__content {
   display: block;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    position: relative;
+    right: auto;
+    top: auto;
+
+    gap: 20px;
+
+    background-color: rgba(#bcbcbc, 0.3);
+    text-align: center;
+  }
 }

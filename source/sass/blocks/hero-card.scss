@@ -68,10 +68,6 @@
   color: #333333;
 
   background-color: #ffffff;
-  position: absolute;
-  top: -77px;
-  right: -100px;
-  transform: rotate(15deg);
   transition: all 0.2s ease;
 
   @include hover-focus {
